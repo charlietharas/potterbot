@@ -58,7 +58,7 @@ model.load_weights("weights.h5")
 # generating :)
 string_mapped = X[99]
 full_string = [numToChar[value] for value in string_mapped]
-for i in range (32768):
+for i in range (2048):
     x = np.reshape(string_mapped, (1, len(string_mapped), 1))
     x = x / float(len(characters))
     pred_index = np.argmax(model.predict(x, verbose=0))
